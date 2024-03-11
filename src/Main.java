@@ -5,15 +5,7 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> intList = Arrays.asList(1, 2, 5, 16, -1, -2, 0, 32, 3, 5, 8, 23, 4);
-        List<Integer> result = new ArrayList<>();
-        for (Integer iter : intList) {
-            if (iter > 0 && iter % 2 == 0) {
-                result.add(iter);
-            }
-        }
-        Collections.sort(result);
-        System.out.println(result);
+
 
 
         List<String> names = Arrays.asList("Jack", "Connor", "Harry", "George", "Samuel", "John");
@@ -49,6 +41,8 @@ public class Main {
                 .sorted(Comparator.comparing(Person::getFamily))
                 .map(family -> family.getFamily())
                 .collect(Collectors.toList());
-        System.out.println(list2);
+        System.out.println(list2.get(0));
+        System.out.println(list2.get(list2.size() / 2 - 1));
+        System.out.println(list2.get(list2.size() - 1));
     }
 }
